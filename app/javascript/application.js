@@ -13,6 +13,7 @@ document.addEventListener('turbo:load', () => {
         data: {
             labels: JSON.parse(ctx.canvas.dataset.labels),
             datasets: [{
+                label: 'Monthly Expenses',
                 data: JSON.parse(ctx.canvas.dataset.data),
             }]
         },

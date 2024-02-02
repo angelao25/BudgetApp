@@ -19,7 +19,7 @@
     <%= link_to "New expense", new_expense_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
   <div>
-    <canvas id="myChart" width="400px" height="200px" data-labels="<%= @months %>" data-data="<%= @expenses_by_month %>"></canvas>
+    <canvas id="myChart" width="400px" height="200px" data-labels="<%= params[:month] ? @days_in_month : @months %>" data-data="<%= params[:month] ? @values_per_day : @monthly_sums %>"></canvas>
   </div>
   <div id="expenses" class="min-w-full mt-4 rounded-lg">
     <%#= @expenses_by_day.values.map(&:amount).sum %>
